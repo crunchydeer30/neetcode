@@ -32,9 +32,10 @@ func createLinkedList(arr []int) *ListNode {
 
 func printLinkedList(head *ListNode) {
 	for head != nil {
-		fmt.Println(head.Val)
+		fmt.Print(head.Val, " ")
 		head = head.Next
 	}
+	fmt.Println()
 }
 
 func main() {
