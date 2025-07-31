@@ -1,11 +1,5 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println(mergeSort([]int{3, 7, 8, 5, 4, 2, 6, 1}))
-}
-
 func mergeSort(arr []int) []int {
 	if len(arr) <= 1 {
 		return arr
