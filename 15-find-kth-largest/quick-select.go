@@ -1,13 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"math/rand"
 )
 
-func main() {
-	fmt.Println(findKthLargest([]int{3, 2, 1, 5, 6, 4}, 2))
-}
+// func main() {
+// 	fmt.Println(findKthLargest([]int{3, 2, 1, 5, 6, 4}, 2))
+// }
 
 func findKthLargest(nums []int, k int) int {
 	return quickSelect(nums, k, 0, len(nums)-1)
