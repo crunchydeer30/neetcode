@@ -6,6 +6,28 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+func inorderTraversal(root *TreeNode) []int {
+	steps := []int{}
+	stack := []*TreeNode{}
+
+	curr := root
+
+	for curr != nil || len(stack) > 0 {
+		for curr != nil {
+			stack = append(stack, curr)
+			curr = curr.Left
+		}
+
+		curr = stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		steps = append(steps, curr.Val)
+
+		curr = curr.Right
+	}
+
+	return steps
+}
+
 func inorderTraversalRecursive(root *TreeNode) []int {
 	steps := []int{}
 	traverseRecursive(root, &steps)
