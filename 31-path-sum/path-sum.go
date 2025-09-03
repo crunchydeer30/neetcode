@@ -22,16 +22,16 @@ func main() {
 	fmt.Println(hasPathSum(root, 3))
 }
 
-func hasPathSum(root *TreeNode, targetSum int) bool {
-	if root == nil {
-		return false
-	}
+// func hasPathSum(root *TreeNode, targetSum int) bool {
+// 	if root == nil {
+// 		return false
+// 	}
 
-	targetSum -= root.Val
+// 	targetSum -= root.Val
 
-	if root.Left == nil && root.Right == nil {
-		return targetSum == 0
-	}
+// 	if root.Left == nil && root.Right == nil {
+// 		return targetSum == 0
+// 	}
 
-	return hasPathSum(root.Left, targetSum) || hasPathSum(root.Right, targetSum)
-}
+// 	return hasPathSum(root.Left, targetSum) || hasPathSum(root.Right, targetSum)
+// }
